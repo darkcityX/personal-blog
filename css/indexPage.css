@@ -1,0 +1,122 @@
+/**
+ * 首页相关样式
+ * 使用媒体查询，及响应式相关技术
+*/
+
+/* 1、body背景图加载 */
+@media screen and (max-width: 768px){
+    .indexBody{
+        background: #000 url(./../image/bg.png) no-repeat;
+        background-size: 100%;
+    }    
+}
+
+
+/* 2、内容结构: PC端 */
+.header{ /* ------------------------头部------------------------ */
+    margin-top: 40px;
+}
+.header .header-title{
+    width: 100%;
+}
+.header .header-navBars{
+    display: none;
+}
+
+.nav{
+    margin: 10px 0;
+    height: 40px;    
+}
+.nav .container{
+    height: 40px;
+    border-bottom: 1px solid #e5e5e5;    
+    box-shadow: #000 1px 1px 1px 1px;
+}
+.nav .container .navContainer{
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+    border-bottom: 1px solid #e5e5e5;
+}
+.nav .container .navContainer li{
+    padding: 0 10px;
+    height: 40px;
+    
+}
+.nav .container .navContainer li a{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    color: #333;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+
+
+/* 2、内容结构: 移动端 */
+@media screen and (max-width: 768px){
+    .header{/* ------------------------头部------------------------ */
+        margin-top: 0;
+        height: 60px;
+        border-bottom: 1px solid #e5e5e5;
+        box-shadow: #e5e5e5 0px -1px 4px 2px;
+        background: #fff;
+    }
+    .header .container{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        height: 60px;
+    }
+    .header .header-title{
+        padding-right: 40px;
+        width: 100%;    
+    }
+    .header .header-title h1{
+        margin: 0;
+        padding: 0;
+        color: #333;
+        font-size: 20px;
+        height: 40px;
+        line-height: 40px;
+    }
+    .header .header-title .header-saying{
+        height: 20px;
+    }
+    .header .header-title .header-saying p{
+        margin: 0;
+        padding: 0;
+        color: #666;
+        font-size: 14px;
+        height: 20px;
+        line-height: 20px;
+    }
+    .header .header-navBars{
+        position: absolute;
+        top: 0;
+        right: 15px;
+        display: block;
+        width: 40px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+
+    }
+    .header .header-navBars img{
+        display: inline-block;  
+        height: 32px;  
+    }
+
+    .nav{
+        display: none;
+    }
+}
+
+
